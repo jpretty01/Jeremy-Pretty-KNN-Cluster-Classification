@@ -8,6 +8,10 @@ Created on Mon Dec 27 22:31:26 2021
 import pandas as pd
 import numpy as np
 
+age = 58
+height = 70
+weight = 125
+
 def get_distance(p1,p2):
     p1 = np.array(p1)
     p2 = np.array(p2)
@@ -43,7 +47,7 @@ if __name__ == "__main__":
     df = pd.read_csv('https://gist.githubusercontent.com/dhar174/14177e1d874a33bfec565a07875b875a/raw/7aa9afaaacc71aa0e8bc60b38111c24e584c74d8/data.csv',names=['Age','Height','Weight','Gender','label'])
     
     #our test input
-    test = [42,70,250,1]
+    test = [age,height,weight,1]
 
     matrix = df.values
     answers = knn(test,matrix,k)
